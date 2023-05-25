@@ -8,6 +8,7 @@ const Problem1 = () => {
     e.preventDefault()
     const formData = Object.fromEntries(new FormData(e.target))
     setData((prev) => [...prev, formData])
+    e.target.reset()
   }
 
   const filteredData = useMemo(() => {

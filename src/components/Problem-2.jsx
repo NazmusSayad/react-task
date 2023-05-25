@@ -203,7 +203,9 @@ function useData(search, page) {
 
   const dataToShow = useMemo(() => {
     if (!search) return evenData
-    return evenData.filter((d) => d.name.toLowerCase().includes(search))
+    return evenData.filter((d) =>
+      d.name.toLowerCase().includes(search.toLowerCase())
+    )
   }, [evenData, search])
 
   const pageTo = page * 20
